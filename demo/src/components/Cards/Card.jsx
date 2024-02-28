@@ -7,93 +7,81 @@ export const Card = () => {
   const Data = [
     {
       imageFile: "../assets/Rectangle649.png",
-      heading: "Test",
-      description: "Test",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description:
+        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
     },
     {
       imageFile: "assets/Rectangle649.png",
-      heading: "Test 2",
-      description: "Test 2",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description:
+        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
     },
     {
       imageFile: "assets/Rectangle649.png",
-      heading: "Test 3",
-      description: "Test 3",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description:
+        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
     },
     {
       imageFile: "assets/Rectangle649.png",
-      heading: "Test 4",
-      description: "Test 4",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description:
+        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
     },
     {
       imageFile: "assets/Rectangle649.png",
-      heading: "Test 5",
-      description: "Test 5",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description:
+        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
     },
     {
       imageFile: "assets/Rectangle649.png",
-      heading: "Test 6",
-      description: "Test 6",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description:
+        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
     },
     {
       imageFile: "assets/Rectangle649.png",
-      heading: "Test 7",
-      description: "Test 7",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description:
+        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
     },
   ];
 
-    const settings = {
+  const settings = {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-
-    };
-
-    function SampleNextArrow(props) {
-      const { className, style, onClick } = props;
-      return (
-        <div
-          className={className}
-          style={{ ...style, display: "block", background: "red" }}
-          onClick={onClick}
-        />
-      );
-    }
-    
-    function SamplePrevArrow(props) {
-      const { className, style, onClick } = props;
-      return (
-        <div
-          className={className}
-          style={{ ...style, display: "block", background: "green" }}
-          onClick={onClick}
-        />
-      );
-    }
-    
+    speed: 4000,
+    autoplaySpeed: 4000,
+    cssEase: "ease-in-out"
+  };
 
   return (
-    <div className="w-3/4 -auto">
-      <div className="mt-20 ml-20 w-100 m-auto">
-      <Slider {...settings}>
-      {Data.map((item) => (
-        <div>
-          <div className="rounded-t-xl flex flex-col p-relative justify-center items-center gap-4 p-4">
-            <img src={item.imageFile} alt="" />
-          </div>
-          <div className="flex flex-col justify-center items-center ">
-            <p className="text-xl font-bold">{item.heading}</p>
-            <p>{item.description}</p>
-          </div>
-        </div>
-      ))}
-      </Slider>
+    <div className="h-[631px] w-[1436px] gap-[32px] pt-[32px]pb-[32px] m-auto">
+        <p className="text-[28px] leading-[42px] w-[1124px] h-[42px] gap-[32px] pt-[32px] mb-[32px] m-auto">
+          Upcoming Groups
+        </p>
+      <div className="w-[1124px] h-[600px] gap-[24px] pl-4 pr-[16px,] py-[12px,] m-auto">
+        <Slider {...settings}>
+          {Data.map((item) => (
+            <div>
+              <div className="rounded-t-xl flex flex-col justify-center items-center gap-[10px] p-4 mt-[32px]">
+                <img src={item.imageFile} alt="" />
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <p className="text-xl w-[316px] text-center leading-[25px] text-[#121014] pb-[20px]">
+                  {item.heading}
+                </p>
+                <p className="w-[316px] h-[80px] leading-[20px] text-[#272529]">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );

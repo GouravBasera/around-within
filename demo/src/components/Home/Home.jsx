@@ -1,13 +1,13 @@
 import React from 'react'
 import { Card } from '../Cards/Card'
-import { Bottomslider } from '../BottomSlider/Bottomslider'
+import { CenterMode } from '../BottomSlider/Bottomslider'
 
 export const Home = () => {
   return (
-    <div>Home
+    <div>
         <Card />
 
-        <Bottomslider />
+        <CenterMode />
     </div>
   )
 }
