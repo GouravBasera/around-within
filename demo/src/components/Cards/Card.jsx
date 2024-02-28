@@ -43,20 +43,48 @@ export const Card = () => {
   ];
 
     const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+
     };
+
+    function SampleNextArrow(props) {
+      const { className, style, onClick } = props;
+      return (
+        <div
+          className={className}
+          style={{ ...style, display: "block", background: "red" }}
+          onClick={onClick}
+        />
+      );
+    }
+    
+    function SamplePrevArrow(props) {
+      const { className, style, onClick } = props;
+      return (
+        <div
+          className={className}
+          style={{ ...style, display: "block", background: "green" }}
+          onClick={onClick}
+        />
+      );
+    }
+    
 
   return (
     <div className="w-3/4 -auto">
-      <div className="mt-20">
+      <div className="mt-20 ml-20 w-100 m-auto">
       <Slider {...settings}>
       {Data.map((item) => (
         <div>
-          <div className="h-56 rounded-t-xl flex flex-col p-relative justify-center items-center gap-4 p-4">
+          <div className="rounded-t-xl flex flex-col p-relative justify-center items-center gap-4 p-4">
             <img src={item.imageFile} alt="" />
           </div>
           <div className="flex flex-col justify-center items-center ">
