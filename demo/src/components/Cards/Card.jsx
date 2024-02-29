@@ -8,44 +8,51 @@ export const Card = () => {
     {
       imageFile: "../assets/Rectangle649.png",
       heading: "Lacus amet egestas ullamcorper fermentum",
-      description:
-        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      description: "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      startsFrom: '16 March'
+    },
+    {
+      imageFile: "assets/Rectangle649.png",
+      heading: "Lacus amet egestas ullamcorper fermentum",
+      description: "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      startsFrom: '16 March'
     },
     {
       imageFile: "assets/Rectangle649.png",
       heading: "Lacus amet egestas ullamcorper fermentum",
       description:
         "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      startsFrom: '16 March'
     },
     {
       imageFile: "assets/Rectangle649.png",
       heading: "Lacus amet egestas ullamcorper fermentum",
       description:
         "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      startsFrom: '16 March'
+
     },
     {
       imageFile: "assets/Rectangle649.png",
       heading: "Lacus amet egestas ullamcorper fermentum",
       description:
         "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      startsFrom: '16 March'
+
     },
     {
       imageFile: "assets/Rectangle649.png",
       heading: "Lacus amet egestas ullamcorper fermentum",
       description:
         "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      startsFrom: '16 March'
     },
     {
       imageFile: "assets/Rectangle649.png",
       heading: "Lacus amet egestas ullamcorper fermentum",
       description:
         "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
-    },
-    {
-      imageFile: "assets/Rectangle649.png",
-      heading: "Lacus amet egestas ullamcorper fermentum",
-      description:
-        "Trauma, Anxiety, Depression, Life Transitions, Career Uncertainty, Relationship Challenges, Quarter-Life Crisis, Couples Therapy",
+      startsFrom: '16 March'
     },
   ];
 
@@ -78,6 +85,9 @@ export const Card = () => {
                 <p className="w-[316px] h-[80px] leading-[20px] text-[#272529]">
                   {item.description}
                 </p>
+              </div>
+              <div className="bg-[#F7F131] rounded-lg pl-2 pr-[8px,] py-[4px,] w-[129px] h-[28px] float-right translate-x-[-39px] translate-y-[-467px]">
+                <p>Starts: {item.startsFrom}</p>
               </div>
             </div>
           ))}
